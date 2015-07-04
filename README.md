@@ -1,7 +1,7 @@
-KvantLattice
-============
+KvantTunnel
+===========
 
-GPU accelerated fractal tunnel renderer for Unity
+KvantTunnel is a GPU accelerated fractal tunnel renderer for Unity.
 
 ![animgif](http://38.media.tumblr.com/bb39e081430b281a426bfcf2270dca97/tumblr_nqytjtE0b91qio469o1_400.gif)
 
