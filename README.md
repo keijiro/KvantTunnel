@@ -3,7 +3,9 @@ KvantLattice
 
 GPU accelerated fractal tunnel renderer for Unity
 
-![screen](http://38.media.tumblr.com/bb39e081430b281a426bfcf2270dca97/tumblr_nqytjtE0b91qio469o1_400.gif)
+![animgif](http://38.media.tumblr.com/bb39e081430b281a426bfcf2270dca97/tumblr_nqytjtE0b91qio469o1_400.gif)
+
+![screenshot](http://36.media.tumblr.com/9da4781927571cc022dfacca4ba1f76a/tumblr_nqytrvxAUn1qio469o1_1280.png)
 
 System Requirements
 -------------------
