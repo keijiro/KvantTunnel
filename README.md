@@ -15,7 +15,7 @@ Unity 5.1 or later versions.
 Compatibility
 -------------
 
-KvantLattice needs a 4-component floating-point texture format. Basically, it
+KvantTunnel needs a 4-component floating-point texture format. Basically, it
 means it runs only on desktop/laptop-class GPUs.
 
 License
