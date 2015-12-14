@@ -20,7 +20,7 @@ Shader "Hidden/Kvant/Tunnel/Kernels"
     float2 _MainTex_TexelSize;
 
     float2 _Extent;
-    float _Offset;
+    float2 _Offset;
     float2 _Frequency;
     float3 _Amplitude;
     float2 _ClampRange;
@@ -39,7 +39,7 @@ Shader "Hidden/Kvant/Tunnel/Kernels"
     {
         float3 vp = cylinder(i.uv);
 
-        float2 nc1 = float2(i.uv.x, vp.z + _Offset) * _Frequency;
+        float2 nc1 = (float2(i.uv.x, vp.z) + _Offset) * _Frequency;
     #if ENABLE_WARP
         float2 nc2 = nc1 + float2(124.343, 311.591);
         float2 nc3 = nc1 + float2(273.534, 178.392);
