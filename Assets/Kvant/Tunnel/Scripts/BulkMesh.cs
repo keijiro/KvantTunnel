@@ -67,8 +67,6 @@ namespace Kvant
                 var Sx = 0.5f / Nx;
                 var Sy = 1.0f / (totalRows + 1);
 
-                var Oy = 0.0f;
-
                 // Texcoord Array for UV1 and UV2
                 var TA1 = new Vector2[Nx * (Ny - 1) * 6];
                 var TA2 = new Vector2[Nx * (Ny - 1) * 6];
@@ -81,9 +79,9 @@ namespace Kvant
                     {
                         var Ix2 = Ix * 2 + (Iy & 1);
                         // UVs for position
-                        TA1[iTA + 0] = new Vector2(Sx * (Ix2 + 0), Oy + Sy * (Iy + 0));
-                        TA1[iTA + 1] = new Vector2(Sx * (Ix2 + 1), Oy + Sy * (Iy + 1));
-                        TA1[iTA + 2] = new Vector2(Sx * (Ix2 + 2), Oy + Sy * (Iy + 0));
+                        TA1[iTA + 0] = new Vector2(Sx * (Ix2 + 0), Sy * (Iy + 0));
+                        TA1[iTA + 1] = new Vector2(Sx * (Ix2 + 1), Sy * (Iy + 1));
+                        TA1[iTA + 2] = new Vector2(Sx * (Ix2 + 2), Sy * (Iy + 0));
                         // UVs for normal vector
                         TA2[iTA] = TA2[iTA + 1] = TA2[iTA + 2] = TA1[iTA];
                     }
@@ -96,9 +94,9 @@ namespace Kvant
                     {
                         var Ix2 = Ix * 2 + 2 - (Iy & 1);
                         // UVs for position
-                        TA1[iTA + 0] = new Vector2(Sx * (Ix2 + 0), Oy + Sy * (Iy + 0));
-                        TA1[iTA + 1] = new Vector2(Sx * (Ix2 - 1), Oy + Sy * (Iy + 1));
-                        TA1[iTA + 2] = new Vector2(Sx * (Ix2 + 1), Oy + Sy * (Iy + 1));
+                        TA1[iTA + 0] = new Vector2(Sx * (Ix2 + 0), Sy * (Iy + 0));
+                        TA1[iTA + 1] = new Vector2(Sx * (Ix2 - 1), Sy * (Iy + 1));
+                        TA1[iTA + 2] = new Vector2(Sx * (Ix2 + 1), Sy * (Iy + 1));
                         // UVs for normal vector
                         TA2[iTA] = TA2[iTA + 1] = TA2[iTA + 2] = TA1[iTA];
                     }
@@ -142,7 +140,7 @@ namespace Kvant
                 mesh.Optimize();
 
                 // Avoid being culled.
-                mesh.bounds = new Bounds(Vector3.zero, Vector3.one * 100);
+                mesh.bounds = new Bounds(Vector3.zero, Vector3.one * 1000);
 
                 // This only for temporary use. Don't save.
                 mesh.hideFlags = HideFlags.DontSave;

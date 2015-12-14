@@ -251,7 +251,8 @@ namespace Kvant
         {
             var m = _kernelMaterial;
 
-            m.SetVector("_Extent", new Vector2(_radius, _height));
+            var extentHeight = _height / _totalStacks * (_totalStacks + 1);
+            m.SetVector("_Extent", new Vector2(_radius, extentHeight));
             m.SetFloat("_Offset", VOffset);
             m.SetVector("_Frequency", new Vector2(_noiseRepeat, _noiseFrequency));
             m.SetVector("_Amplitude", new Vector3(1, _noiseWarp, _noiseWarp) * _noiseElevation);
